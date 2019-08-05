@@ -1,0 +1,47 @@
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling : touch;
+  height: 100%;
+  width: 100%;
+}
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 'Microsoft YaHei','宋体', Tahoma, Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+input，textarea{outline:none;}
+input,select{ -webkit-appearance: none; appearance: none;}
+
+/* 阻止长按页面，弹出菜单的方法。（此方法只针对ios系统，android系统尚未解决） */
+a, img {-webkit-touch-callout:none;}
+
+/* placeholder的文字颜色与输入内容的文字色不同，默认是浅灰色的。如要与输入内容的文字颜色保持一致，可做下面的设置 */
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #000; 
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #000;
+}
+:-ms-input-placeholder{
+  color: #000;
+}
+::-webkit-input-placeholder{
+  color: #000;
+}
+
+/*组件切换的动画*/
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+
+/* .fade-leave-active in <2.1.8 */
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}

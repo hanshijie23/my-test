@@ -1,6 +1,6 @@
 <template>
   <div class="btn-component-div">
-    <button class="btn-component-style">测试btn</button>
+    <button class="btn-component-style"></button>
   </div>
 </template>
 

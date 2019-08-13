@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
+  linkActiveClass: 'activeClass',
   routes: [
     {
       path: '/',
@@ -14,9 +15,8 @@ const router = new VueRouter({
       name: 'home',
       component: resolve => require(['@/components/mobile/levelOnePages/Home'], resolve),
       meta: {
-        headerMsg: {
-          title: 'homePage'
-        }
+        title: 'homePage',
+        showMainBtn: true
       },
       children: [
         {
@@ -24,18 +24,26 @@ const router = new VueRouter({
           name: 'detail',
           component: resolve => require(['@/components/mobile/levelTwoPages/Details'], resolve),
           meta: {
-            headerMsg: {
-              title: 'detail'
-            }
+            title: 'detail',
+            showMainBtn: false
           }
         }
       ]
+    },
+    {
+      path: '/components',
+      name: 'components',
+      component: resolve => require(['@/components/mobile/levelOnePages/Components'], resolve),
+      meta: {
+        title: 'componentsHome',
+        showMainBtn: true
+      }
     }
   ]
 })
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.headerMsg.title
+  document.title = to.meta.title
   next()
 })
 

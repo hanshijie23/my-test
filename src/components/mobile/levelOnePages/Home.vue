@@ -8,7 +8,6 @@
         <span>hobby: {{item.hobby}}</span>
         <span>job: {{item.job}}</span>
       </div>
-      <test-btn></test-btn>
     </div>
     <router-view></router-view>
   </div>
@@ -106,7 +105,6 @@ export default {
 </script>
 
 <style scoped lang='stylus'>
-
 .common-div
   position: absolute;
   top: 0;
@@ -116,14 +114,11 @@ export default {
   .home-div
     position: absolute;
     top: 0;
+    bottom 50px
     width: 100%;
-    height: 100%
     overflow hidden
     overflow-y auto
-    // bottom 20px
     .list-div
-      border solid 1px black
-      // margin 20px 0px
       span
         display block
     .fixBtn

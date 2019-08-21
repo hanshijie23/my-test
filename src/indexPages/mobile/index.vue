@@ -31,7 +31,7 @@ export default {
 .position-bottom-btn-div
   position absolute
   bottom 0
-  height 50px
+  height 50PX
   width 100%
   display flex
   text-align center
@@ -44,13 +44,13 @@ export default {
   .activeClass
     color blue
   .rt-border
-    border-right: solid 1px black
+    border-right: solid 1PX black
 
 .position-bottom-btn-div::before
   content ''
   position absolute
   top 0
   width 100%
-  height 1px
+  height 1PX
   background-color $red
 </style>

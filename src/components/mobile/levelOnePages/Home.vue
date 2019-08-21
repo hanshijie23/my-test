@@ -110,18 +110,21 @@ export default {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #ffffff
   .home-div
     position: absolute;
     top: 0;
-    bottom 50px
+    bottom 50PX
     width: 100%;
     overflow hidden
     overflow-y auto
     .list-div
+      width 300px
+      margin 5px auto
+      border solid 1PX black
+      font-size 14px
       span
         display block
     .fixBtn
       position fixed
-      bottom 10px
+      bottom 10PX
 </style>

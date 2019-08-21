@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './index.vue'
 import router from '@/router/mobile.js'
+import '@/assets/js/rem.js'
 import 'stylus/base.styl'
 import 'stylus/common.styl'
 

@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './index.vue'
 import router from '@/router/mobile.js'
+import 'stylus/base.styl'
+import 'stylus/common.styl'
 
 Vue.config.productionTip = false
 

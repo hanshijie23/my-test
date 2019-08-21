@@ -1,8 +1,10 @@
 <template>
   <div class="mobile-common-div" id="mobile-common-div">
-    <router-view></router-view>
-    <div class="main-bottom-btn" v-show="$route.meta.showMainBtn">
-      <router-link class="tab-div" :to="item.path" tag="div" v-for="(item,index) in mainBtnList" :key="index">
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
+    <div class="position-bottom-btn-div" v-show="$route.meta.showMainBtn">
+      <router-link class="tab-div" :style="(index>mainBtnList.length)?'rt-border':''" :to="item.path" tag="div" v-for="(item,index) in mainBtnList" :key="index">
         <i></i>
         <span>{{item.title}}</span>
       </router-link>
@@ -25,24 +27,30 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import "../../assets/stylus/common.styl"
-.main-bottom-btn
+<style lang="stylus" scoped>
+.position-bottom-btn-div
   position absolute
   bottom 0
   height 50px
   width 100%
   display flex
+  text-align center
   .tab-div
     height 100%
     flex 1
-.main-bottom-btn::before
+    display flex
+    flex-direction column
+    justify-content center
+  .activeClass
+    color blue
+  .rt-border
+    border-right: solid 1px black
+
+.position-bottom-btn-div::before
   content ''
   position absolute
   top 0
   width 100%
   height 1px
-  background-color #DBDBDB
-.activeClass
-  color blue
+  background-color $red
 </style>

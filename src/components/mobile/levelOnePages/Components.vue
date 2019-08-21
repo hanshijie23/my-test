@@ -1,12 +1,14 @@
 <template>
   <div>
-    自定义组件
+    <diy-btn></diy-btn>
   </div>
 </template>
 
 <script>
+import diyBtn from '../../common/button'
 export default {
-  name: 'components'
+  name: 'components',
+  components: {'diy-btn': diyBtn}
 }
 </script>
 

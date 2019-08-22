@@ -2,9 +2,9 @@
   <div class="common-div">
     <div class="home-div">
       <div
+        class="list-div"
         v-for="(item, index) in list"
         :key="index"
-        class="list-div"
         @click="toPageDetails"
       >
         <span>name: {{item.name}}</span>
@@ -100,6 +100,8 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
   },
   methods: {
     toPageDetails () {

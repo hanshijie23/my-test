@@ -55,7 +55,7 @@ export default {
     flex-direction column
     justify-content center
   .activeClass
-    color blue
+    color $blue
   .rt-border
     border-right solid 1PX $balck
 .position-bottom-btn-div::before

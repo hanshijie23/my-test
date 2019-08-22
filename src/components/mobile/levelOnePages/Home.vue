@@ -1,7 +1,12 @@
 <template>
   <div class="common-div">
     <div class="home-div">
-      <div v-for="(item, index) in list" :key="index" class="list-div" @click="toPageDetails">
+      <div
+        v-for="(item, index) in list"
+        :key="index"
+        class="list-div"
+        @click="toPageDetails"
+      >
         <span>name: {{item.name}}</span>
         <span>age: {{item.age}}</span>
         <span>gender: {{item.gender}}</span>
@@ -98,7 +103,7 @@ export default {
   },
   methods: {
     toPageDetails () {
-      this.$router.push({path: '/home/detail'})
+      this.$router.push({ path: '/home/detail' })
     }
   }
 }
@@ -106,22 +111,22 @@ export default {
 
 <style scoped lang='stylus'>
 .common-div
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  position absolute
+  top 0
+  width 100%
+  height 100%
   .home-div
-    position: absolute;
-    top: 0;
+    position absolute
+    top 0
     bottom 50PX
-    width: 100%;
+    width 100%
     overflow hidden
     overflow-y auto
     .list-div
       width 300px
-      margin 5px auto
-      border solid 1PX black
+      margin 5PX auto 15PX auto
       font-size 14px
+      box-shadow 0PX 20PX 20PX -20PX #5E5E5E
       span
         display block
     .fixBtn

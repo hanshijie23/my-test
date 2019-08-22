@@ -13,6 +13,8 @@ Vue.config.productionTip = false
 new Vue({
   el: '#mobile-content',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })

@@ -8,10 +8,8 @@
 import diyBtn from '../../common/button'
 export default {
   name: 'components',
-  components: {'diy-btn': diyBtn}
+  components: { 'diy-btn': diyBtn }
 }
 </script>
 
-<style lang="stylus">
-
-</style>
+<style lang="stylus"></style>

@@ -18,5 +18,5 @@ export default {
   height 100%
   overflow hidden
   overflow-y auto
-  background #ffffff
+  background $white
 </style>

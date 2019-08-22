@@ -22,7 +22,7 @@ export default {
     background $red
     border-radius 50px
     margin 0 auto
-    color #ffffff
+    color $white
     font-size 20px
     letter-spacing 2px
     line-height 50px

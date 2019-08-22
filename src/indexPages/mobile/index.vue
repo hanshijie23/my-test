@@ -57,7 +57,7 @@ export default {
   .activeClass
     color blue
   .rt-border
-    border-right solid 1PX black
+    border-right solid 1PX $balck
 .position-bottom-btn-div::before
   content ''
   position absolute

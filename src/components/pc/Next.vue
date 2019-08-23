@@ -1,16 +1,12 @@
 <template>
   <div>
-    <div>Home</div>
-    <router-link
-      tag="button"
-      to="/next"
-    >next</router-link>
+    next
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Next'
 }
 </script>
 

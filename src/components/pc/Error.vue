@@ -1,12 +1,12 @@
 <template>
   <div>
-    <router-view></router-view>
+    error
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Pc'
+  name: 'Err'
 }
 </script>
 

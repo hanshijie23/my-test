@@ -13,6 +13,8 @@ Vue.config.productionTip = false
 Vue.prototype.$cookie = cookie
 Vue.prototype.$axios = axios
 
+// Vue.use(axios)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#mobile-content',

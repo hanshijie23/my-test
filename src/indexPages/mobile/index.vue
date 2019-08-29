@@ -1,23 +1,10 @@
 <template>
-  <div
-    class="mobile-common-div"
-    id="mobile-common-div"
-  >
+  <div class="mobile-common-div" id="mobile-common-div">
     <transition name="fade">
       <router-view></router-view>
     </transition>
-    <div
-      class="position-bottom-btn-div"
-      v-show="$route.meta.showMainBtn"
-    >
-      <router-link
-        class="tab-div"
-        :style="(index>mainBtnList.length)?'rt-border':''"
-        :to="item.path"
-        tag="div"
-        v-for="(item,index) in mainBtnList"
-        :key="index"
-      >
+    <div class="position-bottom-btn-div" v-show="$route.meta.showMainBtn">
+      <router-link class="tab-div" :style="(index>mainBtnList.length)?'rt-border':''" :to="item.path" tag="div" v-for="(item,index) in mainBtnList" :key="index">
         <i></i>
         <span>{{item.title}}</span>
       </router-link>

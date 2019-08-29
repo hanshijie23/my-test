@@ -42,7 +42,6 @@ router.beforeEach((to, from, next) => {
       next()
     } else {
       window.location.href = 'https://tcas.cango.com:8443/cas/login'
-      next()
     }
   } else {
     next()

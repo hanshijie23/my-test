@@ -1,5 +1,6 @@
 /* eslint-disable */
 import axios from 'axios'
+import config from './config'
 
 // 超时时间
 axios.defaults.timeout = 5000;
@@ -22,7 +23,7 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   response => {
     console.log(response)
-    return response
+    return response.data
   },
   error => {
     console.log('响应失败')

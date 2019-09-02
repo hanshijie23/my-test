@@ -1,6 +1,7 @@
 <template>
   <div class="btn-component-div">
     <button class="btn-component-style"></button>
+    <slot></slot>
   </div>
 </template>
 

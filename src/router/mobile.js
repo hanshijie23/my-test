@@ -35,6 +35,15 @@ const router = new VueRouter({
         title: 'componentsHome',
         showMainBtn: true
       }
+    },
+    {
+      path: '/mine',
+      name: 'mine',
+      component: resolve => require(['@/components/mobile/levelOnePages/Mine'], resolve),
+      meta: {
+        title: 'Mine',
+        showMainBtn: true
+      }
     }
   ]
 })

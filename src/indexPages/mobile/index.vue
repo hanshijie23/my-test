@@ -19,8 +19,8 @@ export default {
       mainBtnList: [
         { title: '首页', path: '/home' },
         { title: '组件', path: '/components' },
-        { title: '首页', path: '/home3' },
-        { title: '首页', path: '/home4' }
+        // { title: '首页', path: '/home3' },
+        { title: '我', path: '/mine' }
       ]
     }
   }
@@ -42,9 +42,9 @@ export default {
     flex-direction column
     justify-content center
   .activeClass
-    color $blue
+    color $red
   .rt-border
-    border-right solid 1PX $balck
+    border-right solid 1PX $black
 .position-bottom-btn-div::before
   content ''
   position absolute

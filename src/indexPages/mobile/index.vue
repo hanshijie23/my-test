@@ -1,23 +1,10 @@
 <template>
-  <div
-    class="mobile-common-div"
-    id="mobile-common-div"
-  >
+  <div class="mobile-common-div" id="mobile-common-div">
     <transition name="fade">
       <router-view></router-view>
     </transition>
-    <div
-      class="position-bottom-btn-div"
-      v-show="$route.meta.showMainBtn"
-    >
-      <router-link
-        class="tab-div"
-        :style="(index>mainBtnList.length)?'rt-border':''"
-        :to="item.path"
-        tag="div"
-        v-for="(item,index) in mainBtnList"
-        :key="index"
-      >
+    <div class="position-bottom-btn-div" v-show="$route.meta.showMainBtn">
+      <router-link class="tab-div" :style="(index>mainBtnList.length)?'rt-border':''" :to="item.path" tag="div" v-for="(item,index) in mainBtnList" :key="index">
         <i></i>
         <span>{{item.title}}</span>
       </router-link>
@@ -32,8 +19,8 @@ export default {
       mainBtnList: [
         { title: '首页', path: '/home' },
         { title: '组件', path: '/components' },
-        { title: '首页', path: '/home3' },
-        { title: '首页', path: '/home4' }
+        // { title: '首页', path: '/home3' },
+        { title: '我', path: '/mine' }
       ]
     }
   }
@@ -55,9 +42,9 @@ export default {
     flex-direction column
     justify-content center
   .activeClass
-    color $blue
+    color $red
   .rt-border
-    border-right solid 1PX $balck
+    border-right solid 1PX $black
 .position-bottom-btn-div::before
   content ''
   position absolute

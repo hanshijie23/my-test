@@ -1,12 +1,12 @@
 <template>
   <div>
-    <router-view></router-view>
+    next
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Pc'
+  name: 'Next'
 }
 </script>
 

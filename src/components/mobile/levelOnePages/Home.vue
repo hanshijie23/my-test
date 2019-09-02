@@ -1,12 +1,7 @@
 <template>
-  <div class="common-div">
+  <div class="levOne-common-div">
     <div class="home-div">
-      <div
-        class="list-div"
-        v-for="(item, index) in list"
-        :key="index"
-        @click="toPageDetails"
-      >
+      <div class="list-div" v-for="(item, index) in list" :key="index" @click="toPageDetails">
         <span>name: {{item.name}}</span>
         <span>age: {{item.age}}</span>
         <span>gender: {{item.gender}}</span>
@@ -102,6 +97,15 @@ export default {
     }
   },
   mounted () {
+    this.$axios.ajax({
+      url: 'https://sit-train-service.999haoche.com:8888/train/outUser/getOutUserByOutUserTestId',
+      data: { t: '66666666666' },
+      method: 'post'
+    }).then(res => {
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
+    })
   },
   methods: {
     toPageDetails () {
@@ -112,11 +116,7 @@ export default {
 </script>
 
 <style scoped lang='stylus'>
-.common-div
-  position absolute
-  top 0
-  width 100%
-  height 100%
+.levOne-common-div
   .home-div
     position absolute
     top 0

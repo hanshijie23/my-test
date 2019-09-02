@@ -1,5 +1,5 @@
 <template>
-  <div class="detail-div">
+  <div class="levTwo-common-div">
     <h3>details</h3>
   </div>
 </template>
@@ -10,13 +10,4 @@ export default {
 }
 </script>
 
-<style scoped lang='stylus'>
-.detail-div
-  position absolute
-  top 0
-  width 100%
-  height 100%
-  overflow hidden
-  overflow-y auto
-  background $white
-</style>
+<style scoped lang='stylus'></style>

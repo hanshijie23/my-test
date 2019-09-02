@@ -1,5 +1,5 @@
 <template>
-  <div class="levOne-common-div">我的</div>
+  <div class="common-div">我的</div>
 </template>
 
 <script>

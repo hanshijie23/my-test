@@ -1,5 +1,5 @@
 <template>
-  <div class="levOne-common-div">
+  <div class="common-div">
     <div class="home-div">
       <div class="list-div" v-for="(item, index) in list" :key="index" @click="toPageDetails">
         <span>name: {{item.name}}</span>
@@ -116,22 +116,21 @@ export default {
 </script>
 
 <style scoped lang='stylus'>
-.levOne-common-div
-  .home-div
-    position absolute
-    top 0
-    bottom 50PX
-    width 100%
-    overflow hidden
-    overflow-y auto
-    .list-div
-      width 300px
-      margin 5PX auto 15PX auto
-      font-size 14px
-      box-shadow 0PX 20PX 20PX -20PX #5E5E5E
-      span
-        display block
-    .fixBtn
-      position fixed
-      bottom 10PX
+.home-div
+  position absolute
+  top 0
+  bottom 50PX
+  width 100%
+  overflow hidden
+  overflow-y auto
+  .list-div
+    width 300px
+    margin 5PX auto 15PX auto
+    font-size 14px
+    box-shadow 0PX 20PX 20PX -20PX #5E5E5E
+    span
+      display block
+  .fixBtn
+    position fixed
+    bottom 10PX
 </style>

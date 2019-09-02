@@ -1,5 +1,5 @@
 <template>
-  <div class="levTwo-common-div">
+  <div class="common-div">
     <h3>details</h3>
   </div>
 </template>

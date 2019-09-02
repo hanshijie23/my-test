@@ -1,5 +1,5 @@
 <template>
-  <div class="levOne-common-div">
+  <div class="common-div">
     <diy-btn></diy-btn>
   </div>
 </template>

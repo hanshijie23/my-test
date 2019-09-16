@@ -102,7 +102,7 @@ export default {
       data: { name: '李国栋', mobile: '15921926592' },
       method: 'post'
     }).then(res => {
-      console.log(res)
+      // console.log(res)
     }).catch(err => {
       console.log(err)
     })

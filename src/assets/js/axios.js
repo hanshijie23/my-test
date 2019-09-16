@@ -14,7 +14,6 @@ axios.interceptors.request.use(
     return config
   },
   error => {
-    console.log('请求失败')
     return Promise.reject(error)
   }
 )
@@ -22,11 +21,12 @@ axios.interceptors.request.use(
 // 响应拦截器
 axios.interceptors.response.use(
   response => {
-    console.log(response)
-    return response.data
+    if (response.status === 200 && response.data.code === 0) {
+      return response.data.data
+    }
+    return Promise.reject(response.data)
   },
   error => {
-    console.log('响应失败')
     return Promise.reject(error)
   }
 )

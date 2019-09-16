@@ -1,5 +1,5 @@
 <template>
-  <div class="common-div">
+  <div class="details-common-div">
     <h3>details</h3>
   </div>
 </template>
@@ -10,4 +10,12 @@ export default {
 }
 </script>
 
-<style scoped lang='stylus'></style>
+<style scoped lang='stylus'>
+.details-common-div
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  overflow hidden
+</style>

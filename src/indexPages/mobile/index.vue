@@ -1,10 +1,12 @@
 <template>
-  <div class="mobile-common-div" id="mobile-common-div">
-    <transition name="fade">
-      <router-view></router-view>
-    </transition>
+  <div id="mobile-common-div">
+    <div class="mobile-common-div" :style="$route.meta.showMainBtn?'bottom: 50PX':'bottom: 0'">
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </div>
     <div class="position-bottom-btn-div" v-show="$route.meta.showMainBtn">
-      <router-link class="tab-div" :style="(index>mainBtnList.length)?'rt-border':''" :to="item.path" tag="div" v-for="(item,index) in mainBtnList" :key="index">
+      <router-link class="tab-div" :to="item.path" tag="div" v-for="(item,index) in mainBtnList" :key="index">
         <i></i>
         <span>{{item.title}}</span>
       </router-link>
@@ -28,6 +30,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.mobile-common-div
+  position absolute
+  top 0
+  left 0
+  width 100%
 .position-bottom-btn-div
   position absolute
   bottom 0
@@ -43,8 +50,6 @@ export default {
     justify-content center
   .activeClass
     color $red
-  .rt-border
-    border-right solid 1PX $black
 .position-bottom-btn-div::before
   content ''
   position absolute

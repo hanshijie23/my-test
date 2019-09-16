@@ -1,5 +1,5 @@
 <template>
-  <div class="common-div">
+  <div>
     <div class="home-div">
       <div class="list-div" v-for="(item, index) in list" :key="index" @click="toPageDetails">
         <span>name: {{item.name}}</span>
@@ -98,8 +98,8 @@ export default {
   },
   mounted () {
     this.$axios.ajax({
-      url: 'https://sit-train-service.999haoche.com:8888/train/outUser/getOutUserByOutUserTestId',
-      data: { t: '66666666666' },
+      url: 'https://sit-train-service.999haoche.com:8888/train/outUser/getOutUserByMobileAndName',
+      data: { name: '李国栋', mobile: '15921926592' },
       method: 'post'
     }).then(res => {
       console.log(res)
@@ -119,7 +119,7 @@ export default {
 .home-div
   position absolute
   top 0
-  bottom 50PX
+  bottom 0
   width 100%
   overflow hidden
   overflow-y auto

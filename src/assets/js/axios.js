@@ -2,33 +2,26 @@
 import axios from 'axios'
 import config from './config'
 
-const axiosService = axios.create({})
-
-// 超时时间
-// axiosService.defaults.timeout = 5000;
+// 创建axios实例，对实例进行封装配置
+const axiosService = axios.create({
+  headers: {'Content-Type': 'application/json;charset=utf-8'}
+})
 
 // 请求拦截器
-axiosService.interceptors.request.use(
-  config => {
-    config.headers = {
-      'Content-Type': 'application/json;charset=utf-8'
-    }
+axiosService.interceptors.request.use(config => {
     return config
-  },
-  error => {
+  },error => {
     return Promise.reject(error)
   }
 )
 
 // 响应拦截器
-axiosService.interceptors.response.use(
-  response => {
+axiosService.interceptors.response.use(response => {
     if (response.status === 200 && response.data.code === 0) {
       return response.data.data
     }
     return Promise.reject(response.data)
-  },
-  error => {
+  },error => {
     return Promise.reject(error)
   }
 )
@@ -38,9 +31,9 @@ export default class Axios {
   static ajax(options) {
     return new Promise((resolve, reject) => {
       axios({
-        url: options.url,
+        url: config.baseHost + options.url,
         method: options.method,
-        data: options.method.toUpperCase() === 'POST' ? options.data : null
+        data: options.data
       }).then((response) => {
         resolve(response)
       }).catch((err) => {

@@ -1,15 +1,21 @@
 <template>
-  <div class="common-div">
-    <diy-btn></diy-btn>
-  </div>
+  <div class="components-common-div"></div>
 </template>
 
 <script>
-import diyBtn from '../../common/button'
+import diyBtn from '../../common/Button'
 export default {
   name: 'components',
   components: { 'diy-btn': diyBtn }
 }
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus" scoped>
+.components-common-div
+  position absolute
+  top 0
+  bottom 0
+  width 100%
+  overflow hidden
+  overflow-y auto
+</style>

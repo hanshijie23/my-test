@@ -2,11 +2,13 @@
 import axios from 'axios'
 import config from './config'
 
+const axiosService = axios.create({})
+
 // 超时时间
-axios.defaults.timeout = 5000;
+// axiosService.defaults.timeout = 5000;
 
 // 请求拦截器
-axios.interceptors.request.use(
+axiosService.interceptors.request.use(
   config => {
     config.headers = {
       'Content-Type': 'application/json;charset=utf-8'
@@ -19,7 +21,7 @@ axios.interceptors.request.use(
 )
 
 // 响应拦截器
-axios.interceptors.response.use(
+axiosService.interceptors.response.use(
   response => {
     if (response.status === 200 && response.data.code === 0) {
       return response.data.data

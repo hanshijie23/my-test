@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import btnComponent from '../../common/button'
+import btnComponent from '../../common/Button'
 export default {
   name: 'home',
   components: {

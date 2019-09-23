@@ -5,18 +5,30 @@
         <router-view></router-view>
       </transition>
     </div>
-    <tab-list></tab-list>
+    <tab-list>
+      <tab-item routerPath="/home">
+        <img slot="icon" src="../../assets/icon/icon1@2x.png" style="width: 20px">
+        <span>首页</span>
+      </tab-item>
+      <tab-item routerPath="/components">
+        <span>组件</span>
+      </tab-item>
+      <tab-item routerPath="/mine">
+        <span>我</span>
+      </tab-item>
+    </tab-list>
   </div>
 </template>
 
 <script>
-import TabList from '../../components/common/tab'
+import TabList from '../../components/common/Tab/list'
+import TabItem from '../../components/common/Tab/item'
 export default {
   data () {
     return {
     }
   },
-  components: {TabList}
+  components: { TabList, TabItem }
 }
 </script>
 

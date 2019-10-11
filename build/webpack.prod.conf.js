@@ -64,7 +64,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: config.build.mobile,
-      template: 'src/indexPages/mobile/index.html',
+      template: 'src/pages/mobile/index.html',
       inject: true,
       minify: {
         removeComments: true,
@@ -79,7 +79,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: config.build.pc,
-      template: 'src/indexPages/pc/index.html',
+      template: 'src/pages/pc/index.html',
       inject: true,
       minify: {
         removeComments: true,

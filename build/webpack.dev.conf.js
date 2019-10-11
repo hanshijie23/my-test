@@ -54,13 +54,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'mobile.html',
-      template: 'src/indexPages/mobile/index.html',
+      template: 'src/pages/mobile/index.html',
       inject: true,
       chunks: ['mobile']
     }),
     new HtmlWebpackPlugin({
       filename: 'pc.html',
-      template: 'src/indexPages/pc/index.html',
+      template: 'src/pages/pc/index.html',
       inject: true,
       chunks: ['pc']
     }),

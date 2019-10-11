@@ -97,12 +97,11 @@ export default {
     }
   },
   mounted () {
-    this.$axios.ajax({
-      url: 'https://sit-train-service.999haoche.com:8888/train/outUser/getOutUserByMobileAndName',
-      data: { name: '李国栋', mobile: '15921926592' },
-      method: 'post'
+    this.$axios.post({
+      url: '/train/outUser/getOutUserByMobileAndName',
+      data: { name: '李国栋', mobile: '15921926592' }
     }).then(res => {
-      // console.log(res)
+      console.log(res)
     }).catch(err => {
       console.log(err)
     })

@@ -21,11 +21,13 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    // 关闭缩进检查
-    "indent": 'off',
+    // 缩进检查
+    'indent': 'off',
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // 关闭函数括号前的空格验证
+    'space-before-function-paren': 0
   }
 }

@@ -56,7 +56,7 @@ exports.cssLoaders = function (options) {
   
  var stylusOptions = {
     import: [
-      path.join(__dirname, "../src/assets/stylus/base.styl"), // base.styl全局变量文件
+      path.join(__dirname, "../src/assets/stylus/common.styl"), // base.styl全局变量文件
     ]
   }
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
